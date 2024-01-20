@@ -34,7 +34,8 @@ Clone the repository:
 	: pkg upgrade
 	: pkg install git
 	: pkg install python
-	: git clone https://github.com/akalankar/user-data-entry.git
+	: git clone https://github.com/akalankar/ude.git
+ 	: cd ude
 	: python ude.py
 
 	
@@ -43,5 +44,6 @@ Clone the repository:
 	
 	: sudo apt update
 	: sudo apt upgrade
-	: git clone https://github.com/akalankar/user-data-entry.git
+	: git clone https://github.com/akalankar/ude.git
+ 	: cd ude
 	: python ude.py
