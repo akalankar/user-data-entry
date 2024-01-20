@@ -26,6 +26,8 @@ User Data Entry is a simple tool that allows users to save and view personal det
 ## Installation
 
 Clone the repository:
+	[ Termux and Kali Linux ]
+	
 	[ Termux ]
 	
 	: pkg update
