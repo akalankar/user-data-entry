@@ -25,31 +25,31 @@ class ude:
         print(Fore.LIGHTBLUE_EX + '   Help Center')
         print()
 
-        print(Fore.LIGHTRED_EX + "   This tool can save and review people's information.")
+        print(Fore.LIGHTGREEN_EX + "   This tool can save and review people's information.")
         print()
 
-        print(Fore.RED + "   :Personal information can be saved by 'Add User'.")
-        print(Fore.RED + "   :You can view and delete saved information using the name given to the 'search tag'.")
-        print(Fore.RED + "   :You have to enter the number of data you want to save to the 'data counter'.")
+        print(Fore.LIGHTYELLOW_EX + "   :Personal information can be saved by 'Add User'.")
+        print(Fore.LIGHTYELLOW_EX + "   :You can view and delete saved information using the name given to the 'search tag'.")
+        print(Fore.LIGHTYELLOW_EX + "   :You have to enter the number of data you want to save to the 'data counter'.")
         print()
 
-        print(Fore.RED + "   :You can view the list of people's names currently saved through 'User List'.")
+        print(Fore.LIGHTYELLOW_EX + "   :You can view the list of people's names currently saved through 'User List'.")
         print()
 
-        print(Fore.RED + "   :If you want to see the details of a previously saved person, you can go through 'View User' and give the relevant tag to the relevant person's data and view the information.")
+        print(Fore.LIGHTYELLOW_EX + "   :If you want to see the details of a previously saved person, you can go through 'View User' and give the relevant tag to the relevant person's data and view the information.")
         print()
 
-        print(Fore.RED + "   :If you want to remove the details of a previously saved person, you can go through 'Delete User' and remove the information by giving the relevant tag to the relevant person's data.")
+        print(Fore.LIGHTYELLOW_EX + "   :If you want to remove the details of a previously saved person, you can go through 'Delete User' and remove the information by giving the relevant tag to the relevant person's data.")
         print()
 
-        print(Fore.RED + "   :You can access my GitHub account via 'Go'.")
+        print(Fore.LIGHTYELLOW_EX + "   :You can access my GitHub account via 'Go'.")
         print()
 
         sleep(1)
         print()
         go_back = input(Fore.LIGHTCYAN_EX + '   [~]  ' + Fore.LIGHTYELLOW_EX + 'Go to home.? (Yes or No): ')
 
-        if go_back == 'ok' or go_back == 'Ok' or go_back == 'OK' or go_back == 'yes' or go_back == 'Yes' or go_back == 'YES':
+        if go_back == 'yes' or go_back == 'Yes' or go_back == 'YES':
             sleep(0.200)
             space()
             ude().home()
@@ -107,7 +107,7 @@ class ude:
             print()
             go_back = input(Fore.LIGHTCYAN_EX + '   [~]  ' + Fore.LIGHTYELLOW_EX + 'Go to home.? (Yes or No): ')
 
-            if go_back == 'ok' or go_back == 'Ok' or go_back == 'OK' or go_back == 'yes' or go_back == 'Yes' or go_back == 'YES':
+            if go_back == 'yes' or go_back == 'Yes' or go_back == 'YES':
                 sleep(0.200)
                 space()
                 ude().home()
@@ -116,7 +116,6 @@ class ude:
                 sleep(0.500)
                 print(Fore.LIGHTRED_EX + '   :End user data entry...')
                 sleep(0.500)
-                exit()
 
             else:
                 sleep(0.200)
@@ -146,7 +145,7 @@ class ude:
         print()
         go_back = input(Fore.LIGHTCYAN_EX + '   [~]  ' + Fore.LIGHTYELLOW_EX + 'Go to home.? (Yes or No): ')
 
-        if go_back == 'ok' or go_back == 'Ok' or go_back == 'OK' or go_back == 'yes' or go_back == 'Yes' or go_back == 'YES':
+        if go_back == 'yes' or go_back == 'Yes' or go_back == 'YES':
             sleep(0.200)
             space()
             ude().home()
@@ -155,7 +154,6 @@ class ude:
             sleep(0.500)
             print(Fore.LIGHTRED_EX + '   :End user data entry...')
             sleep(0.500)
-            exit()
 
         else:
             sleep(0.200)
@@ -167,17 +165,12 @@ class ude:
         brack()
         print(Fore.LIGHTBLUE_EX + '   Enter Your Details')
         print()
-        search_tag = input(Fore.LIGHTCYAN_EX + '   [~]  ' + Fore.LIGHTRED_EX + 'Search Tag: ')
+        search_tag = input(Fore.LIGHTCYAN_EX + '   [~]  ' + Fore.LIGHTYELLOW_EX + 'Search Tag: ')
         if len(search_tag) == 0:
             print(Fore.RED + '   :Search tag is empty')
             sleep(2)
             space()
             ude().add()
-
-        elif search_tag == 'back' or search_tag == 'Back' or search_tag == 'BACK':
-            sleep(1)
-            space()
-            ude().home()
 
         elif search_tag in os.listdir('.save'):
             print(Fore.LIGHTRED_EX + '   :This tag already exists')
@@ -186,7 +179,7 @@ class ude:
             ude().add()
 
         else:
-                data_count = str(input(Fore.LIGHTCYAN_EX + '   [~]  ' + Fore.LIGHTRED_EX + 'Data Count: '))
+                data_count = str(input(Fore.LIGHTCYAN_EX + '   [~]  ' + Fore.LIGHTYELLOW_EX + 'Data Count: '))
 
                 if data_count == '0':
                     print(Fore.LIGHTRED_EX + '   :Zero value not valid')
@@ -199,11 +192,6 @@ class ude:
                     sleep(2)
                     space()
                     ude().add()
-
-                elif data_count == 'back' or search_tag == 'Back' or search_tag == 'BACK':
-                    sleep(1)
-                    space()
-                    ude().home()
 
                 else:
                     try:
@@ -219,7 +207,7 @@ class ude:
 
                         print()
                         print(Fore.LIGHTGREEN_EX + '   :All data is save done..!')
-                        sleep(1)
+                        sleep(2)
                         space()
                         ude().home()
 
@@ -231,18 +219,19 @@ class ude:
 
     # home screen
     def home(self):
+        space()
         # banner
         sleep(0.700)
-        print(Fore.RED + "  _   _                 ____        _          _____       _                         ")
+        print(Fore.LIGHTYELLOW_EX + "  _   _                 ____        _          _____       _                         ")
         print(" | | | |___  ___ _ __  |  _ \\  __ _| |_ __ _  | ____|_ __ | |_ _ __ _   _           ")
-        print(Fore.LIGHTGREEN_EX + " | | | / __|/ _ \\ '__| | | | |/ _` | __/ _` | |  _| | '_ \\| __| '__| | | |         ")
+        print(Fore.LIGHTBLUE_EX + " | | | / __|/ _ \\ '__| | | | |/ _` | __/ _` | |  _| | '_ \\| __| '__| | | |         ")
         print(" | |_| \\__ \\  __/ |    | |_| | (_| | || (_| | | |___| | | | |_| |  | |_| |         ")
-        print(Fore.BLUE + "  \\___/|___/\\___|_|    |____/ \\__,_|\\__\\__,_| |_____|_| |_|\\__|_|   \\__, |    ")
-        print("                                                                    |___/            ")
+        print(Fore.LIGHTYELLOW_EX + "  \\___/|___/\\___|_|    |____/ \\__,_|\\__\\__,_| |_____|_| |_|\\__|_|   \\__, |    ")
+        print(Fore.LIGHTYELLOW_EX + "                                                                    |___/            ")
 
-        # made in akiyah
+        # tool created by akiyah
         sleep(0.300)
-        print(Fore.RED + '  \033[4m' + 'Made in akiyah' + '\033[0m')
+        print(Fore.RED + '  \033[4m' + 'Tool created by akiyah' + '\033[0m')
         print()
         print()
 
