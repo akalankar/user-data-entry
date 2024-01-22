@@ -34,8 +34,9 @@ Clone the repository:
 	: pkg upgrade
 	: pkg install git
 	: pkg install python
-	: git clone https://github.com/akalankar/ude.git
- 	: cd ude
+ 	: pip install colorama
+	: git clone https://github.com/akalankar/user-data-entry.git
+ 	: cd user-data-entry
 	: python ude.py
 
 	
@@ -44,6 +45,6 @@ Clone the repository:
 	
 	: sudo apt update
 	: sudo apt upgrade
-	: git clone https://github.com/akalankar/ude.git
- 	: cd ude
+	: git clone https://github.com/akalankar/user-data-entry.git
+ 	: cd user-data-entry
 	: python ude.py
